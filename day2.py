@@ -19,12 +19,13 @@ class AdventDay2:
         self.bad = []
 
     def analyze(self, row):
-        # Checks if provided row is safe. Returns boolean
+        # Checks if provided row is safe. Returns boolean.
         is_row_safe = {row[i] - row[i - 1] for i in range(1, len(row))}
         return (is_row_safe <= {1, 2, 3} or
                 is_row_safe <= {-1, -2, -3})
 
     def analyze_one_bad(self, row, i=0):
+        # Checks if provided row is safe after removing one element. Returns boolean.
         if i>= len(row):
             return False
         x = row[:i] + row[i+1:]
@@ -38,7 +39,7 @@ class AdventDay2:
 
 
     def get_safe_score(self):
-        # Sends each row to self.analyze to check if it's safe.
+        # Calls self.analyze for each row to check if it's safe.
 
         for report in self.reports:
             if self.analyze(report):
@@ -48,6 +49,7 @@ class AdventDay2:
                 self.bad.append(report)
 
     def get_dampener_safe_score(self):
+        # Calls self.analyze_one_bad for each row to check if it's safe after removing one element.
         for row in self.bad:
             if self.analyze_one_bad(row):
                 self.res2 += 1

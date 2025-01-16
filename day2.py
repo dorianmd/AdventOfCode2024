@@ -1,5 +1,13 @@
-class AdventDay2:
+# Advent of Code 2024
+# Day 2: https://adventofcode.com/2024/day/2
+# Description:
+# Goal of this challange is to analyze list of reactor reports and check if they are safe.
+# Safe repot is a list where difference between each element is 1, 2 or 3 and list is either only increasing
+# or decreasing.
+# Second part of the challange implements Problem Dampener to check if there is a way to make a report safe by removing
+# one element.
 
+class AdventDay2:
     def __init__(self):
         self.reports = []
         with open('inputs\day2.txt') as f:
@@ -45,8 +53,8 @@ class AdventDay2:
                 self.res2 += 1
 
 
-
-a = AdventDay2()
-a.get_safe_score()
-a.get_dampener_safe_score()
-print(a.res1, a.res2)
+if __name__ == '__main__':
+    a = AdventDay2()
+    a.get_safe_score()
+    a.get_dampener_safe_score()
+    print(a.res1, a.res2)

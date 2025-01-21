@@ -43,8 +43,8 @@ class AdventDay3:
                 self.res2 += int(x[0]) * int(x[1])
 
 
-
-a = AdventDay3()
-a.get_mult_score()
-a.get_mult_w_instructions()
-print(a.res1, a.res2)
+if __name__ == "__main__":
+    a = AdventDay3()
+    a.get_mult_score()
+    a.get_mult_w_instructions()
+    print(a.res1, a.res2)

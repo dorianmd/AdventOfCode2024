@@ -55,9 +55,8 @@ class AdventDay4:
                 self.res2 +=1 if diag1 in self.word2 and diag2 in self.word2 else 0
 
 
-
-
-a = AdventDay4()
-a.find_word()
-a.find_mas()
-print(a.res1, a.res2)
+if __name__ == "__main__":
+    a = AdventDay4()
+    a.find_word()
+    a.find_mas()
+    print(a.res1, a.res2)

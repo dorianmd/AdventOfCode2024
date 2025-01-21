@@ -19,12 +19,13 @@ class AdventDownloader:
 
     def create(self):
         # Calls both methods
-        self._get_input_file()
+        self._create_input_file()
         self._new_code_file()
 
     # Download
     def _create_input_file(self):
         # Write input from GET request to the file.
+        self._get_input_file()
         input_file_path = os.path.join(self.path, f"inputs\\day{self.day}.txt")
         print(f"Creating input file at: {input_file_path}")
         with open(input_file_path, 'wb') as f:
@@ -48,5 +49,5 @@ class AdventDownloader:
 
 if __name__ == "__main__":
     day = input("Day number: ")
-    a = AdventDownloader()
+    a = AdventDownloader(day)
     a.create()

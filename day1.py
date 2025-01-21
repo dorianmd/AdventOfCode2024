@@ -40,9 +40,6 @@ class AdventDay1:
         return sim_count
 
 
-
-
-
 if __name__ == '__main__':
     a = AdventDay1()
     a.get_sum()

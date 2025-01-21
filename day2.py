@@ -7,6 +7,7 @@
 # Second part of the challange implements Problem Dampener to check if there is a way to make a report safe by removing
 # one element.
 
+
 class AdventDay2:
     def __init__(self):
         self.reports = []

@@ -45,6 +45,7 @@ class AdventDownloader:
         with open(code_file_path, 'w') as code:
             code.close()
 
+
 if __name__ == "__main__":
     day = input("Day number: ")
     a = AdventDownloader()
